@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { slideInFromTop } from "@/utils/motion";
+import Image from "next/image";
 
 const Encryption = () => {
   return (
@@ -20,7 +21,35 @@ const Encryption = () => {
           Security
         </motion.div>
       </div>
-      <div></div>
+      <div className="flex flex-col items-center justify-center translate-y-[-50px] absolute z-[20] w-auto h-auto">
+        <div className="flex flex-col itmes-center group cursor-pointer w-auto h-auto">
+          <Image
+            src="/Locktop.png"
+            alt="Locktop"
+            width={50}
+            height={50}
+            className="translate-y-5 transition-all duration-200 group-hover:translate-y-11"
+          />
+          <Image
+            src="/LockMain.png"
+            alt="LockMain"
+            width={50}
+            height={50}
+            className="z-10"
+          />
+        </div>
+      </div>
+      <div className="w-full flex items-start justify-center absolute">
+        <video
+        loop
+        muted
+        autoPlay
+        playsInline
+        preload="false"
+        className="w-full h-auto"
+        src="/encryption.webm"
+        /> 
+      </div>
     </div>
   );
 };
